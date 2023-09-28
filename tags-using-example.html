@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Пример отображения тегов на веб-странице</title>
+</head>
+<body>
+	<header>
+		<h1>Заголовок 1го уровня</h1>
+		<h2>Заголовок 2го уровня</h2>
+		<h3>Заголовок 3го уровня</h3>
+		<h4>Заголовок 4го уровня</h4>
+		<h5>Заголовок 5го уровня</h5>
+		<h6>Заголовок 6го уровня</h6>
+		<menu>
+			<a href="#">Ссылка без явного УРЛ</a> :: <a href="http://k503labs.ukrdomen.com/" target="_blank">Ссылка на другую страницу</a> :: 
+			<a>Ссылка без href</a> :: <a href="#goplace1">Ссылка на якорь внутри страницы</a>
+		</menu>
+	</header>
+	<main>
+		<div>--------- Начало центральной части страницы ----------</div>
+		<section>
+			<h3>Текст внутри строчных (инлайн) тегов</h3>
+			<div>
+				Обычный текст 
+				<b>Текст внутри B тега</b> 
+				<i>Текст внутри I тега</i>
+				<u>Текст внутри U тега</u> 
+				<strong>Текст внутри STRONG тега</strong> 
+				<span>Текст внутри SPAN тега</span> 
+			</div>
+			<p>
+				А это просто обзац текста внутри тега P, чтобы проверить как выводятся теги абзацев в языке ХТМЛ. Так же будет еще и следующий абзац с текстом ниже.
+			</p>
+			<p>
+				Здесь начинается второй абзац текста внутри второго тега P. А дальше тот же текст. А это просто обзац текста внутри тега P, чтобы проверить как выводятся теги абзацев в языке ХТМЛ. Так же будет еще и следующий абзац с текстом ниже.
+			</p>
+			<p>
+				Третий абзац текста внутри третьего тега P. А дальше тот же текст. А это просто обзац текста внутри тега P, чтобы проверить как выводятся теги абзацев в языке ХТМЛ. Так же будет еще и следующий абзац с текстом ниже.
+			</p>
+			<pre>
+			А это вывод цитаты
+				С сохранением переносов строк
+					И других моментов     с несколькими пробелами
+			</pre>
+		</section>
+		<section>
+			<h3>Списки UL (маркированный)</h3>
+			<ul>
+			<li>Первый элемент списка UL</li>
+			<li>Второй элемент созданного списка</li>
+			<li>Третий элемент с вложенным списком ниже
+				<ul>
+				<li>Первый элемент вложенного списка</li>
+				<li>Второй элемент вложенного списка</li>
+				</ul>
+			</li>
+			<li>Четвертый элемент созданного списка</li>
+			</ul>
+			<h3>Списки OL (нумерованный)</h3>
+			<ol>
+			<li>Первый элемент списка UL</li>
+			<li>Второй элемент созданного списка</li>
+			<li>Третий элемент с вложенным списком ниже
+				<ol>
+				<li>Первый элемент вложенного списка</li>
+				<li>Второй элемент вложенного списка</li>
+				</ol>
+			</li>
+			<li>Четвертый элемент созданного списка</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Таблица без объединенных ячеек</h3>
+			<table border="1">
+			<tr>
+				<th>Колонка 1</th>
+				<th>Колонка 2</th>
+				<th>Колонка 3</th>
+				<th>Колонка 4</th>
+			</tr>
+			<tr>
+				<td>Один</td>
+				<td>Два</td>
+				<td>Три</td>
+				<td>Четыре</td>
+			</tr>
+			<tr>
+				<td>Пять</td>
+				<td>Шесть</td>
+				<td>Семь</td>
+				<td>Восемь</td>
+			</tr>
+			</table>
+			
+			
+			<h3>Таблица c объединенными ячейками</h3>
+			<table border="1">
+			<tr>
+				<th>Колонка 1</th>
+				<th>Колонка 2</th>
+				<th>Колонка 3</th>
+				<th>Колонка 4</th>
+			</tr>
+			<tr>
+				<td>Один</td>
+				<td colspan="2">Два / Три</td>
+				<td>Четыре</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Пять / Девять</td>
+				<td>Шесть</td>
+				<td>Семь</td>
+				<td>Восемь</td>
+			</tr>
+			<tr>
+				<td>Десять</td>
+				<td colspan="2" rowspan="2">Одиннадцать+Двенадцать+Пятнадцать+Шестнадцать</td>
+			</tr>
+			<tr>
+				<td>Тринадцать</td>
+				<td>Четырнадцать</td>
+			</tr>
+			</table>
+			
+		</section>
+		
+		<section>
+			<a name="goplace1"></a>
+			<h3>Формы и поля ввода</h3>
+			<form>
+			<table>
+			<tr>
+				<th colspan="2">Базовые поля</th>
+			</tr>
+			<tr>
+				<td>Однострочное поле ввода: </td>
+				<td><input type="text" placeholder="тут надо вводить текст"></td>
+			</tr>
+			<tr>
+				<td>Пароль: </td>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<td>Чекбокс: </td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td>Чекбокс с привязанным текстом: </td>
+				<td><input id="chk1" type="checkbox"><label for="chk1">Кликни на текст</label></td>
+			</tr>
+			<tr>
+				<td>Радио-группа: </td>
+				<td>
+					<input id="r1" type="radio" name="radgroup1" value="1"><label for="r1">Кликни на текст</label><br>
+					<input id="r2" type="radio" name="radgroup1" value="2"><label for="r2">Кликни вторую кнопку</label><br>
+				</td>
+			</tr>
+			<tr>
+				<td>Выпадающий список: </td>
+				<td><select><option value="1">Один</option><option>Два</option></select></td>
+			</tr>
+			<tr>
+				<td>Раскрытый список (Listbox): </td>
+				<td><select multiple><option value="1">Один</option><option>Два</option><option>Три</option><option>Четыре</option><option>пять</option></select></td>
+			</tr>
+			<tr>
+				<td>Многострочное поле ввода: </td>
+				<td><textarea cols="30" rows="4">Текст внутри поля</textarea></td>
+			</tr>
+			<tr>
+				<th colspan="2">Кнопки</th>
+			</tr>
+			<tr>
+				<td>Button: </td>
+				<td><input type="button" value="Текст на кнопке"></td>
+			</tr>
+			<tr>
+				<td>Button тегом: </td>
+				<td><button>Текст на кнопке</button></td>
+			</tr>
+			<tr>
+				<td>Submit: </td>
+				<td><input type="submit" value="Текст на кнопке"></td>
+			</tr>
+			<tr>
+				<td>Reset: </td>
+				<td><input type="reset" value="Текст на кнопке"></td>
+			</tr>
+			<tr>
+				<th colspan="2">Новые поля в HTML5</th>
+			</tr>
+			<tr>
+				<td>Ввод числа: </td>
+				<td><input type="number" value="4" min="1" max="10"></td>
+			</tr>
+			<tr>
+				<td>Ввод даты: </td>
+				<td><input type="date"></td>
+			</tr>
+			<tr>
+				<td>Ввод времени: </td>
+				<td><input type="time"></td>
+			</tr>
+			<tr>
+				<td>Ввод даты и времени: </td>
+				<td><input type="datetime-local"></td>
+			</tr>
+			<tr>
+				<td>Ввод месяца: </td>
+				<td><input type="month"></td>
+			</tr>
+			<tr>
+				<td>Ввод недели: </td>
+				<td><input type="week"></td>
+			</tr>
+			<tr>
+				<td>Выбор цвета: </td>
+				<td><input type="color"></td>
+			</tr>
+			<tr>
+				<td>Ввод телефона: </td>
+				<td><input type="tel"></td>
+			</tr>
+			<tr>
+				<td>Ввод email: </td>
+				<td><input type="email"></td>
+			</tr>
+			<tr>
+				<td>Ввод url: </td>
+				<td><input type="url"></td>
+			</tr>
+			<tr>
+				<td>Диапазон: </td>
+				<td><input type="range" min="10" max="80"></td>
+			</tr>
+			</table>
+			</form>
+		<div>--------- Конец центральной части страницы ----------</div>
+	</main>
+	<footer>
+		Это футер сайта
+	</footer>
+</body>
+</html>
