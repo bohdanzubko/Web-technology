@@ -1,0 +1,258 @@
+body{
+	font-size: 14px;
+	font-family: Tahoma, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+div, menu{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper{
+	width: 750px;
+	height: 700px;
+	margin: 0 auto;
+}
+
+header{
+	background-color: #ff7d21;
+	border-radius: 0 0 10px 0;
+	font-family: Verdana;
+}
+
+header::after{
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.header-left{
+	float: left;
+	width: calc(100% - 216px);
+	height: 130px;
+	overflow: hidden;
+	background: url('../img/logo-background.png') no-repeat 0 0, url('../img/header-bg.png') repeat-x 0 0;
+	border-right: 1px solid #20207e;
+	color: white;
+}
+
+.header-right{
+	float: right;
+	width: 215px;
+}
+
+.header-buttons{
+	padding: 2px 1px 4px 10px;
+	border-bottom: 1px solid #20207e;
+	margin-bottom: 4px;
+}
+
+.header-buttons>a{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	font-size: 9px;
+	background: url('../img/arc-wh-bl.png') no-repeat 50% 0;
+	width: 64px;
+	padding-top: 9px;
+	text-align: center;
+}
+
+.header-buttons>a>span{
+	display: inline-block;
+	padding-top: 23px;
+	letter-spacing: 1.2px;
+}
+
+.header-buttons>a>span:hover{text-decoration: underline;}
+
+.header-buttons>a.a-help>span{background: url('../img/a-question.png') no-repeat 50% 0;}
+.header-buttons>a.a-about-us>span{background: url('../img/a-excl.png') no-repeat 50% 0;}
+.header-buttons>a.a-contact>span{background: url('../img/a-letter.png') no-repeat 50% 2px;}
+
+.header-logo{
+	float: left;
+	width: 144px;
+	padding: 6px 4px;
+}
+
+.header-center{
+	float: right;
+	width: calc(100% - 152px);
+	font-size: 10px;
+	letter-spacing: 1.5px;
+}
+
+.header-title{
+	padding: 5px 30px;
+}
+
+.header-intro{
+	box-sizing: border-box;
+	padding: 0 2px 2px 0;
+	text-align: right;
+	line-height: 17.7px;
+}
+
+.header-date{
+	padding: 8px 2px;
+	text-align: right;
+}
+
+.search-text{
+	color: white;
+	font-size: 11px;
+	letter-spacing: 0.4px;
+	padding-left: 7px;
+}
+
+.search-input{
+	height: 13px;
+	width: 143px;
+	position: relative;
+	left: 59px;
+	top: 2px;
+}
+
+.search-button{
+	height: 30px;
+	width: 52px;
+	background: url('../img/arc-wh-bl.png') no-repeat 0 0;
+	background-size: 50px 25px;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	position: relative;
+	top: 8px;
+	left: 157px;
+}
+
+.search-button:hover{
+	background-color: #fc944a;
+}
+
+.left-column{
+	float: left;
+	width: 180px;
+	height: 569px;
+	background: #ff7d21 url('../img/logo-bottom.png') no-repeat 0 0;
+	background-position: 0px -1px;
+	font-family: Verdana;
+}
+
+menu>ul{
+	list-style: none;
+	margin: 0;
+	padding-left: 4px;
+}
+
+menu>ul>li{
+	margin: 0;
+	padding: 0px 0 1px 11px;
+	height: 16px;
+	background: url('../img/menu-marker.png') no-repeat 0 50%;
+	border-left: 1px solid #20207e;
+	border-bottom: 1px solid #20207e;
+}
+
+menu>ul>li a{
+	text-decoration: none;
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	position: relative;
+	top: -2px;
+}
+
+.empty-li{
+	height: 22px;
+	background: none;
+}
+
+aside{
+	height: 267px;
+	background-color: white;
+	border: 1px solid white;
+	margin: 28px 4px 0 3px;
+}
+
+.ad-title{
+	height: 31px;
+	background: #ff7d21 url('../img/arc-wh-bl.png') no-repeat 0 0;
+	background-size: 62px 28px;
+	background-position: 7px 3px;
+}
+
+.ad-title>a{
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1.2px;
+	text-decoration: none;
+	position: relative;
+	top: 12px;
+	left: 14px;
+}
+
+.ad-pic{
+	position: relative;
+	top: 2px;
+	left: 16px;
+}
+
+.ad-text{
+	font-size: 10px;
+	margin: 7px 0 0 4px;
+	letter-spacing: 0.7px;
+	line-height: 12px;
+}
+
+.main-content{
+	float: right;
+	width: calc(100% - 193px);
+	margin-top: 10px;
+	border: 1px solid #20207e;
+	border-bottom: none;
+	font-family: Verdana;
+	font-size: 11px;
+	letter-spacing: 0.9px;
+}
+
+.main-content>div{
+	border-bottom: 1px solid #20207e;
+	padding-left: 7px;
+}
+
+.main-top{
+	background-color: #20207e;
+	color: white;
+	font-weight: bold;
+}
+
+.main-cnt-title{
+	font-weight: bold;
+	color: #20207e;
+	padding-top: 7px;
+}
+
+.main-cnt-text{
+	padding-top: 14px;
+	line-height: 13.2px;
+}
+
+.main-center{
+	background: url('../img/plastic.png') no-repeat 100% 100%;
+	background-position: 318px 142px;
+	height: 392px;
+}
+
+.main-bottom{
+	height: 150px;
+}
