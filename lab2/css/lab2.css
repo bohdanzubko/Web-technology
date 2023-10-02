@@ -13,7 +13,6 @@ div, menu{
 
 .wrapper{
 	width: 750px;
-	height: 700px;
 	margin: 0 auto;
 }
 
@@ -110,8 +109,8 @@ header::after{
 }
 
 .search-input{
-	height: 13px;
 	width: 143px;
+	height: 13px;
 	position: relative;
 	left: 59px;
 	top: 2px;
@@ -140,7 +139,6 @@ header::after{
 .left-column{
 	float: left;
 	width: 180px;
-	height: 569px;
 	background: #ff7d21 url('../img/logo-bottom.png') no-repeat 0 0;
 	background-position: 0px -1px;
 	font-family: Verdana;
@@ -149,15 +147,17 @@ header::after{
 menu>ul{
 	list-style: none;
 	margin: 0;
-	padding-left: 4px;
+	padding: 0;
+	margin-left: 4px;
+	padding-top: 22px;
+	border-left: 1px solid #20207e;
 }
 
 menu>ul>li{
 	margin: 0;
-	padding: 0px 0 1px 11px;
-	height: 16px;
-	background: url('../img/menu-marker.png') no-repeat 0 50%;
-	border-left: 1px solid #20207e;
+	padding-left: 11px;
+	line-height: 16px;
+	background: url('../img/menu-marker.png') no-repeat 0 4px;
 	border-bottom: 1px solid #20207e;
 }
 
@@ -167,27 +167,22 @@ menu>ul>li a{
 	font-size: 11px;
 	font-weight: bold;
 	letter-spacing: 1.2px;
-	position: relative;
-	top: -2px;
 }
 
-.empty-li{
-	height: 22px;
-	background: none;
+.li-bt{
+	border-top: 1px solid #20207e;
 }
 
-aside{
-	height: 267px;
+.ad{
 	background-color: white;
 	border: 1px solid white;
 	margin: 28px 4px 0 3px;
 }
 
 .ad-title{
-	height: 31px;
-	background: #ff7d21 url('../img/arc-wh-bl.png') no-repeat 0 0;
+	background: #ff7d21 url('../img/arc-wh-bl.png') no-repeat 7px 3px;
 	background-size: 62px 28px;
-	background-position: 7px 3px;
+	padding: 12px 0 2px 16px;
 }
 
 .ad-title>a{
@@ -196,15 +191,10 @@ aside{
 	color: white;
 	letter-spacing: 1.2px;
 	text-decoration: none;
-	position: relative;
-	top: 12px;
-	left: 14px;
 }
 
 .ad-pic{
-	position: relative;
-	top: 2px;
-	left: 16px;
+	padding: 2px 0 0 16px;
 }
 
 .ad-text{
@@ -233,26 +223,22 @@ aside{
 .main-top{
 	background-color: #20207e;
 	color: white;
-	font-weight: bold;
-}
-
-.main-cnt-title{
-	font-weight: bold;
-	color: #20207e;
-	padding-top: 7px;
 }
 
 .main-cnt-text{
-	padding-top: 14px;
+	padding: 7px 0;
 	line-height: 13.2px;
 }
 
+.main-cnt-text>b{
+	color: #20207e;
+}
+
 .main-center{
-	background: url('../img/plastic.png') no-repeat 100% 100%;
-	background-position: 318px 142px;
-	height: 392px;
+	background: url('../img/plastic.jpg') no-repeat right bottom;
+	padding-bottom: 130px;
 }
 
 .main-bottom{
-	height: 150px;
+	padding-bottom: 60px;
 }
