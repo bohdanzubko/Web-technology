@@ -17,19 +17,17 @@ div, menu{
 }
 
 header{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 	background-color: #ff7d21;
 	border-radius: 0 0 10px 0;
 	font-family: Verdana;
 }
 
-header::after{
-	display: block;
-	clear: both;
-	content: '';
-}
-
 .header-left{
-	float: left;
+	display: flex;
+	flex-flow: row nowrap;
 	width: calc(100% - 216px);
 	height: 130px;
 	overflow: hidden;
@@ -39,12 +37,13 @@ header::after{
 }
 
 .header-right{
-	float: right;
 	width: 215px;
 }
 
 .header-buttons{
-	padding: 2px 1px 4px 10px;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 2px 0;
 	border-bottom: 1px solid #20207e;
 	margin-bottom: 4px;
 }
@@ -73,14 +72,12 @@ header::after{
 .header-buttons>a.a-contact>span{background: url('../img/a-letter.png') no-repeat 50% 2px;}
 
 .header-logo{
-	float: left;
 	width: 144px;
 	padding: 6px 4px;
 }
 
 .header-center{
-	float: right;
-	width: calc(100% - 152px);
+	width: calc(100% - 144px);
 	font-size: 10px;
 	letter-spacing: 1.5px;
 }
@@ -136,8 +133,13 @@ header::after{
 	background-color: #fc944a;
 }
 
+main{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
 .left-column{
-	float: left;
 	width: 180px;
 	background: #ff7d21 url('../img/logo-bottom.png') no-repeat 0 0;
 	background-position: 0px -1px;
@@ -205,7 +207,6 @@ menu>ul>li a{
 }
 
 .main-content{
-	float: right;
 	width: calc(100% - 193px);
 	margin-top: 10px;
 	border: 1px solid #20207e;
