@@ -1,0 +1,82 @@
+.no-adv-body{
+	background-color: white;
+	border: 1px solid white;
+	margin: 28px 4px 0 3px;
+}
+
+.no-adv-title{
+	background: #ff7d21 url('../img/arc-wh-bl.png') no-repeat 7px 3px;
+	background-size: 62px 28px;
+	padding: 12px 0 2px 16px;
+}
+
+.no-adv-title>a{
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1.2px;
+	text-decoration: none;
+}
+
+.no-adv-pic{
+	padding: 2px 0 0 16px;
+}
+
+.no-adv-text{
+	font-size: 10px;
+	margin: 7px 0 0 4px;
+	letter-spacing: 0.7px;
+	line-height: 12px;
+}
+
+#math-form, #math-form-tabel{
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: bold;
+	color: #20207e;
+	letter-spacing: normal;
+	margin: 10px 10px;
+}
+
+#math-form input[type="text"], #math-form select, #result-msg{
+	width: auto;
+	min-height: 17px;
+	border: 2px solid #20207e;
+	border-radius: 12px;
+	padding: 3px 7px;
+	margin: 2px 15px;
+}
+
+#error-msg{
+	width: 250px;
+	text-wrap: nowrap;
+	border: none;
+	color: #e63e3e;
+	font-weight: bold;
+}
+
+#math-form select{
+	height: auto;
+}
+
+#reset-btn, #result-btn{
+	width: 100px;
+	height: 30px;
+	font-weight: bold;
+	color: #20207e;
+	border: 2px solid #20207e;
+	border-radius: 15px;
+	background-color: #c5d5ff;
+}
+
+#reset-btn:hover, #result-btn:hover{
+	background-color: #8ca2d4;
+}
+
+.centered-td{
+	text-align: center;
+}
+
+.variables-info{
+	overflow-wrap: break-word;
+}
