@@ -1,8 +1,8 @@
 <?php
-include('header.php');
+include('php/header.php');
 ?>
 
-<link rel="stylesheet" href="../css/additional_styles.css">
+<link rel="stylesheet" href="css/additional_styles.css">
 
 <main>
 	<div class="left-column">
@@ -32,7 +32,7 @@ include('header.php');
 				<a href="#">Spotlight Features</a>
 			</div>
 			<div>
-				<img class="no-adv-pic" src="../img/medicine.jpg" alt="Medicine photo">
+				<img class="no-adv-pic" src="img/medicine.jpg" alt="Medicine photo">
 				<div class="no-adv-text">
 					<b>Seminars in your area</b><br>
 					Dates, topics, locations, <br>
@@ -50,27 +50,17 @@ include('header.php');
 		</div>
 	</div>
 	<section class="main-content">
-		<div class="main-top"><b>SERVER VARIABLE INFO</b></div>
+		<div class="main-top"><b>REDIRECT TO HOME</b></div>
 		<div class="main-center">
-			<div class="main-cnt-text"><b>Outputing the variable info</b></div>
-			<div class="variables-info">
-				<?php
-				echo nl2br('$_SERVER:' . "\n");
-				foreach ($_SERVER as $key => $val) {
-					echo nl2br($key . ":\n" . $val . "\n");
-				}
-				echo nl2br("\n" . '$_GET:' . "\n");
-				foreach ($_GET as $key => $val) {
-					echo nl2br($key . ":\n" . $val . "\n");
-				}
-				echo nl2br("\n" . '$_POST:' . "\n");
-				foreach ($_POST as $key => $val) {
-					echo nl2br($key . ":\n" . $val . "\n");
-				} ?>
-			</div>
+			<div class="main-cnt-text"><b>Script for redirecting to ahother page</b></div>
+			<div>You will redirected to home page in <span  id="countdown">3</span>...</div>
 	</section>
 </main>
 
+<script>
+	<?php require_once("js/redirection.js"); ?>
+</script>
+
 <?php
-include('footer.php');
+include('php/footer.php');
 ?>

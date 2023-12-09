@@ -1,8 +1,8 @@
 <?php
-include('header.php');
+include('php/header.php');
 ?>
 
-<link rel="stylesheet" href="../css/additional_styles.css">
+<link rel="stylesheet" href="css/additional_styles.css">
 
 <main>
 	<div class="left-column">
@@ -32,7 +32,7 @@ include('header.php');
 				<a href="#">Spotlight Features</a>
 			</div>
 			<div>
-				<img class="no-adv-pic" src="../img/medicine.jpg" alt="Medicine photo">
+				<img class="no-adv-pic" src="img/medicine.jpg" alt="Medicine photo">
 				<div class="no-adv-text">
 					<b>Seminars in your area</b><br>
 					Dates, topics, locations, <br>
@@ -51,7 +51,7 @@ include('header.php');
 	</div>
 	<section class="main-content">
 		<div class="main-top"><b>What's New:</b></div>
-		<div class="main-center" style="background: url('../img/plastic.jpg') no-repeat right bottom;">
+		<div class="main-center" style="background: url('img/plastic.jpg') no-repeat right bottom;">
 			<div class="main-cnt-text"><b>BLUCHIP FREQUENT BUYING CLUB</b></div>
 			<div class="main-cnt-text">
 				Reward yourself. Why not get free travel and gifts just for ordering your dental <br>
@@ -87,9 +87,9 @@ include('header.php');
 </main>
 
 <script>
-	<?php require_once("../js/animation.js"); ?>
+	<?php require_once("js/animation.js"); ?>
 </script>
 
 <?php
-include('footer.php');
+include('php/footer.php');
 ?>

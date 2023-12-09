@@ -1,6 +1,6 @@
 // Set current date
 function setDate() {
-	const daysOfWeek = ["Sunday", "Mondady", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 	const months = ["January", "Fabuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 	const currentDate = new Date();

@@ -1,8 +1,35 @@
 <?php
-include('header.php');
+function getPostPar($name, $def = "")
+{
+	$val = $def;
+	if (isset($_POST[$name])) {
+		$val = $_POST[$name];
+	}
+	return $val;
+}
+
+// Retrieve form data
+$firstNum = getPostPar("first-num");
+$secondNum = getPostPar("second-num");
+$operation = getPostPar("math-op");
+$isValid = true;
+
+// Validate inputs
+$firstNum = str_replace(',', '.', $firstNum);
+$secondNum = str_replace(',', '.', $secondNum);
+
+$numRegex = '/^(?:[+-]?\d+(\.\d+)?|)$/';
+
+if (!preg_match($numRegex, $firstNum) || !preg_match($numRegex, $secondNum)) {
+	$isValid = false;
+}
 ?>
 
-<link rel="stylesheet" href="../css/additional_styles.css">
+<?php
+include('php/header.php');
+?>
+
+<link rel="stylesheet" href="css/additional_styles.css">
 
 <main>
 	<div class="left-column">
@@ -32,7 +59,7 @@ include('header.php');
 				<a href="#">Spotlight Features</a>
 			</div>
 			<div>
-				<img class="no-adv-pic" src="../img/medicine.jpg" alt="Medicine photo">
+				<img class="no-adv-pic" src="img/medicine.jpg" alt="Medicine photo">
 				<div class="no-adv-text">
 					<b>Seminars in your area</b><br>
 					Dates, topics, locations, <br>
@@ -53,7 +80,7 @@ include('header.php');
 		<div class="main-top"><b>Math operaions</b></div>
 		<div class="main-center">
 		<div class="main-cnt-text"><b>Form with script for checking input data</b></div>
-		<form id="math-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onreset="resetFields()" onsubmit="resetFields()">
+		<form id="math-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onreset="resetFields()">
 		<table id="math-form-tabel">
 			<tr>
 				<td><label for="first-num">First number: </label></td>
@@ -81,33 +108,16 @@ include('header.php');
 				<td><div id="result-msg" name="result-msg">
 				<?php
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					// Retrieve form data
-					$firstNum = $_POST["first-num"];
-					$secondNum = $_POST["second-num"];
-					$operation = $_POST["math-op"];
-
-					// Validate inputs
-					$firstNum = str_replace(',', '.', $firstNum);
-					$secondNum = str_replace(',', '.', $secondNum);
-
-					if ($firstNum == "") {
-						$firstNum = "0";
-					}
-
-					if ($secondNum == "") {
-						$secondNum = "0";
-					}
-
-					$numRegex = '/^[+-]?\d+(\.\d+)?$/';
-
-					if (!preg_match($numRegex, $firstNum) || !preg_match($numRegex, $secondNum)) {
+					echo "<script>resetFields();</script>";
+					
+					if($isValid == false){
 						$errorMsg = "Fields must contain numbers only!";
 						goto end;
 					}
 
 					$num1 = doubleval($firstNum);
 					$num2 = doubleval($secondNum);
-
+					
 					// Perform calculations based on the selected operation
 					switch ($operation) {
 						case "sum":	$resultMsg = $num1 + $num2; break;
@@ -135,14 +145,15 @@ include('header.php');
 
 					end:
 					if (isset($errorMsg)) {
-						echo "<script>document.getElementById('error-msg').innerText = '" . $errorMsg . "';</script>";
+						echo "<script>document.getElementById('error-msg').innerText = '". $errorMsg ."';</script>";
 					}
 					else {
 						echo $resultMsg;
 					}
-					echo "<script>if(". $firstNum ." != 0) document.getElementById('first-num').value = '" . $firstNum . "'</script>";
-					echo "<script>if(". $secondNum ." != 0) document.getElementById('second-num').value = '" . $secondNum . "'</script>";
-					echo "<script>document.getElementById('math-op').value = '" . $operation . "'</script>";
+
+					echo "<script>document.getElementById('first-num').value = '". $firstNum ."';
+					document.getElementById('second-num').value = '". $secondNum ."';
+					document.getElementById('math-op').value = '". $operation ."';</script>";
 				}
 				?>
 				</div></td>
@@ -158,5 +169,5 @@ include('header.php');
 </main>
 
 <?php
-include('footer.php');
+include('php/footer.php');
 ?>

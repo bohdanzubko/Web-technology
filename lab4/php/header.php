@@ -2,16 +2,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>lab-4</title>
-	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	<script src="../js/script.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<header>
 		<div class="header-left">
-			<div class="header-logo"><a href="index.php"><img src="../img/tooth-logo.png" alt="Tooth logo" id="animated-logo"></a></div>
+			<div class="header-logo"><a href="index.php"><img src="img/tooth-logo.png" alt="Tooth logo" id="animated-logo"></a></div>
 			<div class="header-center">
-				<div class="header-title"><img src="../img/title.png" alt="Dental Health"></div>
+				<div class="header-title"><img src="img/title.png" alt="Dental Health"></div>
 				<div class="header-intro">
 					These innovations have served to enable us to <br>
 					better live our mission; "To build partnerships <br>

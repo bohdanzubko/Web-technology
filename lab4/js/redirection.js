@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		seconds--;
 
 		if (seconds < 0) {
-			window.location.href = '../php/index.php';
+			window.location.href = 'index.php';
 		} 
 		else {
 			setTimeout(updateCountdown, 1000);
