@@ -18,8 +18,3 @@ function setDate() {
 document.addEventListener("DOMContentLoaded", function(){
 	setDate();
 });
-
-function resetFields(){
-	document.getElementById("error-msg").innerText = "";
-	document.getElementById("result-msg").innerText = "";
-}
