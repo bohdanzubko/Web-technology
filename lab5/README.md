@@ -9,3 +9,5 @@ Added File Manager page. This page allows you to navigate through the server fil
 4. File creation date
 
 Added the ability to create and delete a directory. Creation occurs by entering a name in the form field and submitting it.
+
+Results: [PHP file manager webpage](https://k503labs.ukrdomen.com/labs/535/zubko/lab5/file_manager.php)
