@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>math_form</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css">
+	<script src="../js/script.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="header-left">
+			<div class="header-logo"><a href="main.html"><img src="../img/tooth-logo.png" alt="Tooth logo"></a></div>
+			<div class="header-center">
+				<div class="header-title"><img src="../img/title.png" alt="Dental Health"></div>
+				<div class="header-intro">
+					These innovations have served to enable us to <br>
+					better live our mission; "To build partnerships <br>
+					that improve our customers' earnings by co-managing <br>
+					their supply, equipment and practice management needs". 
+				</div>
+				<div id="header-date">Wednesday, October 23, 2002</div>
+			</div>
+		</div>
+		<div class="header-right">
+			<div class="header-buttons">
+				<a href="#" class="a-help"><span>help</span></a>
+				<a href="#" class="a-about-us"><span>about us</span></a>
+				<a href="#" class="a-contact"><span>contact</span></a>
+			</div>
+			<div class="head-search">
+				<div class="search-text">SEARCH:</div>
+				<div><input type="text" class="search-input"></div>
+				<div><button class="search-button">ok</button></a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="left-column">
+			<menu>
+				<ul>
+				<li class="li-bt"><a href="#">Merchandise</a></li>
+				<li><a href="#">Equipment</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">Seminars</a></li>
+				<li><a href="#">Practice Development</a></li>
+				<li><a href="#">Painless Web</a></li>
+				<li><a href="#">BluChips Rewards</a></li>
+				<li><a href="#">Earnings Builders</a></li>
+				<li><a href="#">Interlink</a></li>
+				<li><a href="#">Featured Products</a></li>
+				<li><a href="#">Partners</a></li>
+				<li><a href="#">International</a></li>
+				<li><a href="#">Government</a></li>
+				<li><a href="#">Handpiece repairs</a></li>
+				<li><a href="form_math.html">Math operations</a></li>
+				<li><a href="redirect_to_main.html">Redirect to home</a></li>
+				</ul>
+			</menu>
+			<div class="ad">
+				<div class="ad-title">
+					<a href="#">Spotlight Features</a>
+				</div>
+				<div>
+					<img class="ad-pic" src="../img/medicine.jpg" alt="Medicine photo">
+					<div class="ad-text">
+						<b>Seminars in your area</b><br> 
+						Dates, topics, locations, <br>
+						& prices. Save 10% when <br>
+						3 or more sign-up! <br>
+						<br>
+						<b>Topics, Trends, <br>
+						Techniques</b><br>
+						Don't let your patients <br>
+						give you the brush-off. <br>
+						Increase patient <br>
+						acceptance!
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="main-content">
+			<div class="main-top"><b>File manager</b></div>
+			<div class="main-center">
+			<div class="main-cnt-text"><b>Navigation through the server file system within a directory.</b></div>
+			<style>
+				#fm-table{
+					font-family: Verdana;
+					font-size: 13px;
+					color: #20207e;
+					letter-spacing: normal;
+					text-align: center;
+					margin: 10px 10px;
+				}
+
+				#fm-table td{
+					padding: 0 10px;
+					min-width: 40px;
+					height: 40px;
+				}
+
+				#file-btn, #create-dir-btn{
+					min-width: 120px;
+					height: 30px;
+					color: #20207e;
+					border: 2px solid #20207e;
+					border-radius: 15px;
+					background-color: #c5d5ff;
+				}
+
+				#file-btn:hover, #create-dir-btn:hover{
+					background-color: #8ca2d4;
+				}
+
+				#remove-dir-btn{
+					width: 30px;
+					height: 30px;
+					color: #790000;
+					font-weight: bolder;
+					border: 2px solid #790000;
+					border-radius: 8px;
+					background-color: #ff4646;
+				}
+
+				#remove-dir-btn:hover{
+					background-color: #ff7777;
+				}
+
+				#create-dir{
+					width: auto;
+					min-height: 21px;
+					border: 2px solid #20207e;
+					border-radius: 12px;
+					padding: 3px 7px;
+					margin: 2px 15px;
+				}
+
+				#error-msg{
+					text-wrap: nowrap;
+					border: none;
+					color: #e63e3e;
+					font-weight: bold;
+				}
+			</style>
+			<form>
+				<input type="text" id="create-dir" name="create-dir" placeholder="Type directory name">
+				<input type="submit" id="create-dir-btn" name="create-dir-btn" value="Create directory">
+				<div id="error-msg" style="margin: 10px 20px;">a</div>
+			</form id="fm-form">			
+			<table id="fm-table">
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Size</th>
+					<th>Date</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td><button id="file-btn">'name'</button></td>
+					<td>'type'</td>
+					<td>'size'</td>
+					<td>'created'</td>
+					<td><button id="remove-dir-btn">X</button></td>
+				</tr>
+				</tr>
+			</table>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+</div>
+</body>
+</html>
