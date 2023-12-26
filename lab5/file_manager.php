@@ -1,5 +1,19 @@
 <?php
-// Formatting the file size format
+function getParams($name, $def = "")
+{
+	$val = $def;
+	if (isset($_POST[$name])) {
+		// Getting $_POST parameters
+		$val = $_POST[$name];
+	}
+	else if (isset($_GET[$name])) {
+		// Getting $_GET parameters
+		$val = $_GET[$name];
+	}
+	return $val;
+}
+
+// Formatting the file size
 function formatSize($size)
 {
 	$units = array('B', 'KB', 'MB', 'GB');
@@ -55,13 +69,14 @@ function getDirCont($dir)
 				$filePath = realpath($dir . '/' . $file);
 				// Check for dangerous characters in the path
 				if (strpos($file, '..') === false) {
-					$link = 'file_manager.php?dir=' . createRelativePath(dirname($filePath)) . '&removeDir=' . createRelativePath($filePath);
 					$info = array(
-						'name' => is_dir($filePath) ? '<a href="?dir=' . createRelativePath($filePath) . '"><button id="file-btn">' . $file . '</button></a>' : $file,
+						'name' => $file,
+						'path' => $filePath,
+						'relativePath' => createRelativePath($filePath),
 						'type' => is_dir($filePath) ? 'DIR' : 'file',
 						'size' => formatSize(filesize($filePath)),
 						'created' => date("Y-m-d H:i:s", filectime($filePath)),
-						'remove' => is_dir($filePath) ? '<a href="'. $link .'"><button id="remove-dir-btn">X</button></a>' : ''
+						'remove' => 'file_manager.php?dir=' . createRelativePath(dirname($filePath)) . '&removeDir=' . createRelativePath($filePath)
 					);
 					$res[] = $info;
 				}
@@ -81,9 +96,9 @@ $errorMsg = ''; // Error massage
 
 // Request for creating the new directory
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["create-dir-btn"])) {
-	$newDirName = $_POST["create-dir"];
+	$newDirName = getParams('create-dir');
 	if (isset($_GET['dir'])){
-		$requestedDir = $_GET['dir'];
+		$requestedDir = getParams('dir');
 		$newDirPath = $currentDir . '/' . $requestedDir;
 	}
 
@@ -102,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["create-dir-btn"])) {
 
 // Request for removing directory
 if (isset($_GET['removeDir'])) {
-	$dirToRemove = $_GET['removeDir'];
+	$dirToRemove = getParams('removeDir');
 
 	if (!empty($dirToRemove)) {
 		$dirToRemovePath = $currentDir . '/' . $dirToRemove;
@@ -123,7 +138,7 @@ if (isset($_GET['removeDir'])) {
 
 // Changing viewed directory if $_GET['dir'] is set
 if (isset($_GET['dir'])) {
-	$requestedDir = $_GET['dir'];
+	$requestedDir = getParams('dir');
 	$currentDir .= '/' . $requestedDir;
 	// Protection against possible attacks like "../../../../"
 	if (strpos($currentDir, '..') === false) {
@@ -164,11 +179,11 @@ include('php/header.php');
 			</tr>
 			<?php foreach ($dirCont as $item): ?>
 				<tr>
-					<td><?php echo $item['name']; ?></td>
+					<td><?php echo is_dir($item['path']) ? '<a href="?dir=' . $item['relativePath'] . '"><button id="file-btn">' . $item['name'] . '</button></a>' : $item['name']; ?></td>
 					<td><?php echo $item['type']; ?></td>
 					<td><?php echo $item['size']; ?></td>
 					<td><?php echo $item['created']; ?></td>
-					<td><?php echo $item['remove']; ?></td>
+					<td><?php echo is_dir($item['path']) ? '<a href="'. $item['remove'] .'"><button id="remove-dir-btn">X</button></a>' : ''; ?></td>
 				</tr>
 			<?php endforeach; ?>
 		</table>
