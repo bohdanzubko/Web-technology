@@ -52,23 +52,20 @@ include('php/header.php');
 		<table id="fm-table" style="font-size: 10px; border-collapse: collapse;" border=1>
 			<tr style="font-size: 13px;">
 				<th>ID</th>
+				<th>Car </th>
 				<th>Image</th>
-				<th>Type</th>
-				<th>Make</th>
-				<th>Model</th>
-				<th>Year</th>
-				<th>Price</th>
 				<th>Parameters</th>
 			</tr>
 			<?php foreach ($cars_arr as $product) : ?>
 			<tr>
 				<td><?= $product["id"] ?></td>
-				<td><?= $product["name"] ?></td>
-				<td><?= $product["group"] ?></td>
-				<td><?= $product["price"] ?></td>
-				<td><?= $product["number"] ?></td>
-				<td><?= $product["year"] ?></td>
-				<td><img width="100" height="100" src="<?= $product["image"] ?>"></td>
+				<td>Model: <?= $product["name"] ?><br>
+					Type: <?= $product["group"] ?><br>
+					Price: <?= $product["price"] ?><br>
+					Number: <?= $product["number"] ?><br>
+					Year: <?= $product["year"] ?>
+				</td>
+				<td><img height="100" src="<?= $product["image"] ?>"></td>
 				<td>
 					<?php
 					$paramsOutput = [];
