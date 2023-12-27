@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE shop [
+<!ELEMENT shop (cars)>
+<!ELEMENT cars (car+)>
+<!ELEMENT car (name, group, price, serialNumber, yearOfIssue, image?, params?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT group (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT yearOfIssue (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT params (param+)>
+<!ELEMENT param (#PCDATA)>
+<!ATTLIST car id ID #REQUIRED>
+<!ATTLIST param pname CDATA #REQUIRED>
+]>
+
+<shop>
+	<cars>
+		<car id="car1">
+			<name>Audi A4</name>
+			<group>Sedan</group>
+			<price>45000.00</price>
+			<serialNumber>123456</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/audi_a4.jpg</image>
+			<params>
+				<param pname="EngineType">Turbocharged</param>
+				<param pname="FuelEfficiency">25 mpg</param>
+			</params>
+		</car>  
+		<car id="car2">
+			<name>Toyota Camry</name>
+			<group>Sedan</group>
+			<price>32000.50</price>
+			<serialNumber>789012</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/toyota_camry.jpg</image>
+			<params>
+				<param pname="EngineType">Hybrid</param>
+				<param pname="Color">Silver</param>
+			</params>
+		</car>
+		<car id="car3">
+			<name>BMW 3 Series</name>
+			<group>Sedan</group>
+			<price>50000.00</price>
+			<serialNumber>345678</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/bmw_3_series.jpg</image>
+			<params>
+				<param pname="EngineType">TwinPower Turbo</param>
+				<param pname="TopSpeed">155 mph</param>
+			</params>
+		</car>
+		<car id="car4">
+			<name>Honda Accord</name>
+			<group>Sedan</group>
+			<price>28000.75</price>
+			<serialNumber>901234</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/honda_accord.jpg</image>
+			<params>
+				<param pname="EngineType">Inline-4</param>
+				<param pname="SafetyRating">5 stars</param>
+				<param pname="Color">Black</param>
+			</params>
+		</car>
+		<car id="car5">
+			<name>Ford Mustang</name>
+			<group>Coupe</group>
+			<price>45000.00</price>
+			<serialNumber>567890</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/ford_mustang.jpg</image>
+			<params>
+				<param pname="EngineType">V8</param>
+				<param pname="Horsepower">450 hp</param>
+			</params>
+		</car>
+		<car id="car6">
+			<name>Chevrolet Camaro</name>
+			<group>Coupe</group>
+			<price>42000.25</price>
+			<serialNumber>123123</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/chevrolet_camaro.jpg</image>
+			<params>
+				<param pname="EngineType">Supercharged V8</param>
+				<param pname="Acceleration">0-60 mph in 3.5s</param>
+				<param pname="Color">Yellow</param>
+			</params>
+		</car>
+		<car id="car7">
+			<name>Nissan Altima</name>
+			<group>Sedan</group>
+			<price>30000.50</price>
+			<serialNumber>456789</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/nissan_altima.jpg</image>
+			<params>
+				<param pname="EngineType">VC-Turbo</param>
+				<param pname="Infotainment">8-inch touchscreen</param>
+			</params>
+		</car>
+		<car id="car8">
+			<name>Mercedes-Benz C-Class</name>
+			<group>Sedan</group>
+			<price>55000.00</price>
+			<serialNumber>987654</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/mercedes_c_class.jpg</image>
+			<params>
+				<param pname="EngineType">Inline-6</param>
+				<param pname="LuxuryFeatures">Leather seats, panoramic roof</param>
+				<param pname="Color">Gray</param>
+			</params>
+		</car>
+		<car id="car9">
+			<name>Jeep Wrangler</name>
+			<group>SUV</group>
+			<price>35000.75</price>
+			<serialNumber>234567</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/jeep_wrangler.jpg</image>
+			<params>
+				<param pname="OffRoadCapability">4x4 capability</param>
+				<param pname="Convertible">Removable top</param>
+			</params>
+		</car>
+		<car id="car10">
+			<name>Hyundai Tucson</name>
+			<group>SUV</group>
+			<price>28000.25</price>
+			<serialNumber>765432</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/hyundai_tucson.jpg</image>
+			<params>
+				<param pname="FuelEfficiency">28 mpg</param>
+				<param pname="SafetyFeatures">Forward Collision Avoidance</param>
+			</params>
+		</car>
+		<car id="car11">
+			<name>Subaru Outback</name>
+			<group>SUV</group>
+			<price>32000.50</price>
+			<serialNumber>876543</serialNumber>
+			<yearOfIssue>2022</yearOfIssue>
+			<image>img/cars/subaru_outback.jpg</image>
+			<params>
+				<param pname="AWD">All-Wheel Drive</param>
+				<param pname="CargoSpace">75.7 cubic feet</param>
+			</params>
+		</car>
+		<car id="car12">
+			<name>Kia Sportage</name>
+			<group>SUV</group>
+			<price>30000.00</price>
+			<serialNumber>345678</serialNumber>
+			<yearOfIssue>2023</yearOfIssue>
+			<image>img/cars/kia_sportage.jpg</image>
+			<params>
+				<param pname="TechFeatures">8-inch touchscreen, Apple CarPlay</param>
+				<param pname="Warranty">5-year/60,000-mile</param>
+			</params>
+		</car>
+	</cars>
+</shop>
